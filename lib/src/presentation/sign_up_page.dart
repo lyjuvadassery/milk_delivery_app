@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:milk_delivery_app/src/config/constants.dart';
-import 'package:milk_delivery_app/src/presentation/select_milk_packets_Page.dart';
+import 'package:milk_delivery_app/src/presentation/select_milk_packets_page.dart';
 import 'package:milk_delivery_app/src/presentation/sign_in_page.dart';
 
 class SignUpController extends GetxController {
@@ -36,7 +36,7 @@ class SignUpPage extends GetResponsiveView<SignUpController> {
             child: Column(
               children: <Widget>[
                 SizedBox(
-                  height: screenHeight * 2.5 / 6.44,
+                  height: screenHeight * 0.35,
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
@@ -55,7 +55,7 @@ class SignUpPage extends GetResponsiveView<SignUpController> {
                   ),
                 ),
                 SizedBox(
-                  height: screenHeight * 3.2 / 6.44,
+                  height: screenHeight * 0.46,
                   child: Obx(() => signUpController.pageIndex.value == 1
                       ? SignUpPage1()
                       : signUpController.pageIndex.value == 2
@@ -63,7 +63,7 @@ class SignUpPage extends GetResponsiveView<SignUpController> {
                           : SignUpPage3()),
                 ),
                 SizedBox(
-                  height: screenHeight * 0.5 / 6.44,
+                  height: screenHeight * 0.08,
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [

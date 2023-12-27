@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:milk_delivery_app/src/config/constants.dart';
-import 'package:milk_delivery_app/src/presentation/select_milk_packets_Page.dart';
+import 'package:milk_delivery_app/src/presentation/select_milk_packets_page.dart';
 import 'package:milk_delivery_app/src/presentation/sign_up_page.dart';
 
 class SignInController extends GetxController {
@@ -17,8 +17,10 @@ final signInController = Get.put(SignInController());
 class SignInPage extends GetResponsiveView<SignInController> {
   @override
   Widget builder() {
-    double screenHeight = screen.height;
-    double screenWidth = screen.width;
+    double screenHeight = Get.mediaQuery.size.height -
+        Get.mediaQuery.padding.top -
+        Get.mediaQuery.padding.bottom;
+    double screenWidth = Get.mediaQuery.size.width;
 
     if (screenWidth > screenHeight) {
       screenHeight = screenWidth;
@@ -36,8 +38,10 @@ class SignInPage extends GetResponsiveView<SignInController> {
             child: Column(
               children: <Widget>[
                 SizedBox(
-                  height: screenHeight * 2.5 / 6.44,
+                  // height: screenHeight * 2.21 / 6.03,
+                  height: screenHeight * 0.35,
                   child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       Image.asset(
                         Constants.logoImage,
@@ -53,11 +57,11 @@ class SignInPage extends GetResponsiveView<SignInController> {
                   ),
                 ),
                 SizedBox(
-                  height: screenHeight * 3.2 / 6.44,
+                  height: screenHeight * 0.53,
                   child: SignInPageContents(),
                 ),
                 SizedBox(
-                  height: screenHeight * 0.5 / 6.44,
+                  height: screenHeight * 0.08,
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [

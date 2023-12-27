@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:milk_delivery_app/src/data/milk_packet.dart';
+import 'package:milk_delivery_app/src/presentation/confirm_milk_selection_page.dart';
 
 class SelectMilkPacketsController extends GetxController {
   var milkPackets = [
@@ -84,9 +85,7 @@ class SelectMilkPacketsPage extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          // Handle the action when the user confirms their selection
-          print(
-              'User selected these milk packets: ${controller.selectedMilkPackets}');
+          Get.to(() => ConfirmMilkSelectionPage());
         },
         child: Icon(Icons.check),
         tooltip: 'Confirm selection',
