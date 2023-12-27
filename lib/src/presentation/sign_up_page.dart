@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:milk_delivery_app/src/config/constants.dart';
+import 'package:milk_delivery_app/src/presentation/select_milk_packets_Page.dart';
 import 'package:milk_delivery_app/src/presentation/sign_in_page.dart';
 
 class SignUpController extends GetxController {
@@ -260,7 +261,9 @@ class SignUpPage3 extends GetResponsiveView<SignUpController> {
             ),
             ElevatedButton(
               // onPressed: () => controller.handleSubmit(),
-              onPressed: () => (),
+              onPressed: () {
+                Get.to(() => SelectMilkPacketsPage());
+              },
               child: const Text('Submit', style: TextStyle(fontSize: 18.0)),
             ),
           ],
@@ -270,7 +273,9 @@ class SignUpPage3 extends GetResponsiveView<SignUpController> {
         // const SizedBox(height: 20.0),
         ElevatedButton(
           // onPressed: () => controller.handleGoogleSignUp(),
-          onPressed: () => (),
+          onPressed: () {
+            Get.to(() => SelectMilkPacketsPage());
+          },
           child: const Text('Sign Up with Google',
               style: TextStyle(fontSize: 18.0)),
         ),

@@ -1,8 +1,7 @@
-import 'dart:js';
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:milk_delivery_app/src/config/constants.dart';
+import 'package:milk_delivery_app/src/presentation/select_milk_packets_Page.dart';
 import 'package:milk_delivery_app/src/presentation/sign_up_page.dart';
 
 class SignInController extends GetxController {
@@ -114,7 +113,9 @@ class SignInPageContents extends GetResponsiveView<SignInController> {
         ),
         ElevatedButton(
           // onPressed: () => controller.handleSubmit(),
-          onPressed: () => (),
+          onPressed: () {
+            Get.to(() => SelectMilkPacketsPage());
+          },
           child: const Text('Submit', style: TextStyle(fontSize: 18.0)),
         ),
         const Text('or', style: TextStyle(fontSize: 12)),
